@@ -1,0 +1,23 @@
+import java .util.*;
+public class Max_Min {
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        int max=0,min=0;
+        int num[]=new int [10];
+        System.out.println("Enter the 10 different numbers in array");
+        for (int i=0;i<10;i++){
+            num[i]=in.nextInt();
+        }
+        max=num[0];
+        min=num[0];
+        for(int j=0;j<10;j++){
+            if(max<num[j])
+            max=num[j];
+            if(min>num[j])
+            min=num[j];
+        }
+        System.out.println("The greatest element of the array="+max);
+        System.out.println("The smallest element of the array="+min);
+    }
+    
+}
