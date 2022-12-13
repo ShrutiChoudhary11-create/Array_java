@@ -1,0 +1,21 @@
+import java.util.*;
+public class Binary_Equivalet {
+    public static void main(String[] args) {
+        int j=0;
+        int num[]=new int[20];
+        Scanner in=new Scanner(System.in);
+        System.out.println("Enter the decimal number");
+        int n=in.nextInt();
+        int n1=n;
+        while(n1>0)
+        {
+            int d=n1%2;
+            num[j]=d;
+            j=j+1;
+            n1=n1/2;
+        }
+        System.out.println("The Binary Equivalent:");
+        for(int i=j;i>=0;i--)
+        System.out.print(num[i]);
+    }
+}
