@@ -1,0 +1,28 @@
+import java.util.*;
+public class Arranging_Name {
+    public static void main(String[] args)
+     {
+        int i,j;
+        Scanner in=new Scanner (System.in);//int i,j;
+        String temp; 
+        String name[]=new String[10];
+        System.out.println("Enter the 10 names");
+        for(i=0;i<10;i++){
+            name[i]=in.nextLine();
+        }
+        System.out.println("The sorted list is in ascending order");
+        for(i=0;i<9;i++)
+        {
+            for(j=(i+1);j<10;j++)
+            if(name[i].compareTo(name[j])>0){
+                temp =name[i];
+                name[i]=name[j];
+                name[j]=temp;
+            }
+        }
+    for(i=0;i<10;i++){
+        System.out.println(name[i]);
+    }
+}
+}
+
